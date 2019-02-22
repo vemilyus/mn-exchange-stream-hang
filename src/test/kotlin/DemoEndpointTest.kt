@@ -41,7 +41,7 @@ class DemoEndpointTest {
 
     @Test
     fun `exchange stream will hang here while retrieving the response`() {
-        val bytes = ByteArray(4096) { (it % 255).toByte() }
+        val bytes = ByteArray(4096) { (it % 256).toByte() }
 
         val body = MultipartBody.builder()
             .addPart(
